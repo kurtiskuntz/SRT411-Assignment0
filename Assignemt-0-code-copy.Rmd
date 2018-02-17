@@ -1,0 +1,109 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+#' ---
+#' title: "Assignment 0"
+#' name: "Kurtis Kuntz"
+#' output: pdf_document
+#' ---
+
+
+#todo 1
+```{r }
+((2016-2014) / (2014-1997)) * 100
+```
+#todo 2
+```{r }
+todo2 = ((2016-2014) / (2014-1997)) * 100
+todo2
+```
+#todo 3
+```{r }
+todo3 = c(sum(4,5,8,11))
+todo3
+```
+#todo 4
+```{r }
+todo4 = rnorm(100)
+plot(todo4)
+```
+#todo 5
+```{r }
+?sqrt
+```
+#todo 7
+```{r }
+P = c(31:60)
+Q = matrix(data=P, nrow = 6, ncol = 5)
+Q
+```
+#todo 8
+```{r }
+x1 = c(rnorm(1:100))
+x2 = c(rnorm(1:100))
+x3 = c(rnorm(1:100))
+
+t = data.frame(a = x1, b = x1+x2, c = x1+x2+x3)
+plot(t)
+```
+#todo 9 
+```{r }
+plot(t$a, type="l", ylim = range(t), lwd = 3, col = rgb(1,0,0,0.3))
+lines(t$b, type = "s", lwd = 2, col = rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch = 20, cex = 4, col = rgb(0,0,1,0.3))
+```
+#todo 11
+```{r }
+root = sqrt(c(rnorm(1:100)))
+```
+#todo 10
+```{r }
+r = read.table(file="C:\\Users\\Michael\\Downloads\\tst1.txt", header = TRUE)
+g = r["g"] + 5
+write.table(g, file="C:\\Users\\Michael\\Downloads\\tst2.txt", row.names = FALSE)
+```
+#todo 12
+```{r }
+x_axis = strptime( c("16022018", "06122018", "26082018"), format = "%d%m%Y")
+y_axis = c("0", "0", "5")
+
+plot(x_axis, y_axis)
+```
+#todo 13
+```{r }
+
+x = c(1:100)
+for (i in x){
+  if(i < 5 | i>90){
+    x[i] = x[i] * 10
+  }
+  else{
+    x[i] = x[i] * 0.1
+  }
+}
+x
+```
+#todo 14
+
+
+x = readline(prompt = "enter your vector: ")
+my_function(x)
+
+
+my_function = function(x) 
+{
+  for (i in x) 
+    {
+      if(i < 5| i > 90)
+      {
+        x[i] = x[i] * 10
+      }
+    else
+    {
+      x[i] = x[i] * 0.1
+    }
+  }
+x  
+}
